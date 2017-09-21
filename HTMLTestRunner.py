@@ -94,7 +94,7 @@ Version in 0.7.1
 # TODO: simplify javascript using ,ore than 1 class in the class attribute?
 
 import datetime
-import StringIO
+from io import StringIO
 import sys
 import time
 import unittest
@@ -527,7 +527,7 @@ class _TestResult(TestResult):
 
     def __init__(self, verbosity=1):
         TestResult.__init__(self)
-        self.outputBuffer = StringIO.StringIO()
+        self.outputBuffer = StringIO()
         self.stdout0 = None
         self.stderr0 = None
         self.success_count = 0
